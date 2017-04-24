@@ -20,7 +20,7 @@
   "params" : [ ]
 }, {
   "name" : "leftnav",
-  "type" : "LEFTNAV",
+  "type" : "PARTIAL",
   "params" : [ ]
 }, {
   "name" : "rightnav",
