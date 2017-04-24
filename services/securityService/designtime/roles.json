@@ -2,7 +2,7 @@
   "name" : "admin",
   "description" : null,
   "roleConfig" : {
-    "landingPage" : "Main"
+    "landingPage" : "LeaveManagement"
   }
 }, {
   "name" : "user",

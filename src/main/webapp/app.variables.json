@@ -15,6 +15,28 @@
     } ],
     "operation" : "toast"
   },
+  "goToPage_ApplyLeave" : {
+    "_id" : "wm-goToPage_ApplyLeave-wm.NavigationVariable-1493047475201",
+    "name" : "goToPage_ApplyLeave",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "ApplyLeave",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_LeaveManagement" : {
+    "_id" : "wm-goToPage_LeaveManagement-wm.NavigationVariable-1493038890856",
+    "name" : "goToPage_LeaveManagement",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "LeaveManagement",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_Main" : {
     "_id" : "wm-wm.NavigationVariable1389180517517",
     "name" : "goToPage_Main",
@@ -22,6 +44,28 @@
     "category" : "wm.NavigationVariable",
     "operation" : "gotoPage",
     "pageName" : "Main"
+  },
+  "goToPage_MyLeaves" : {
+    "_id" : "wm-goToPage_MyLeaves-wm.NavigationVariable-1493045357583",
+    "name" : "goToPage_MyLeaves",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "MyLeaves",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Profile" : {
+    "_id" : "wm-goToPage_Profile-wm.NavigationVariable-1493041757738",
+    "name" : "goToPage_Profile",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Profile",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
   },
   "loggedInUser" : {
     "_id" : "wm-loggedInUser-wm.Variable-1493037639888",
@@ -96,5 +140,31 @@
     "type" : "string",
     "isList" : false,
     "saveInPhonegap" : false
+  },
+  "UserByID" : {
+    "_id" : "wm-UserByID-wm.ServiceVariable-1493041714793",
+    "name" : "UserByID",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "id",
+      "value" : "bind:Variables.loggedInUser.dataSet.id | stringToNumber",
+      "type" : "integer"
+    } ],
+    "type" : "com.hrdb.Employee",
+    "service" : "hrdb",
+    "operation" : "getEmployee",
+    "operationId" : "EmployeeController_getEmployee",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "Employee"
   }
 }

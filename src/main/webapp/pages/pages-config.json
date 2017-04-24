@@ -1,6 +1,14 @@
 [ {
+  "name" : "ApplyLeave",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "Common",
   "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "LeaveManagement",
+  "type" : "PAGE",
   "params" : [ ]
 }, {
   "name" : "Login",
@@ -8,6 +16,14 @@
   "params" : [ ]
 }, {
   "name" : "Main",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "MyLeaves",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Profile",
   "type" : "PAGE",
   "params" : [ ]
 }, {

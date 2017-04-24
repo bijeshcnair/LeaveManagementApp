@@ -1,0 +1,62 @@
+<wm-page data-ng-controller="ProfilePageController" pagetitle="Profile" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1" columns="2">
+                <wm-gridrow name="gridrow3">
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn5">
+                        <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="list-card" dataset="bind:Variables.UserByID.dataSet" navigation="None" name="livelist1">
+                            <wm-listtemplate layout="media" name="listtemplate1">
+                                <wm-card name="card1">
+                                    <wm-card-content fontsize="0.8" fontunit="em" name="card_content1">
+                                        <wm-layoutgrid columns="2" name="layoutgrid2">
+                                            <wm-gridrow name="gridrow5">
+                                                <wm-gridcolumn colwidth="6" columnwidth="6" class="col-xs-6" name="gridcolumn9">
+                                                    <wm-picture name="Picture" width="100%" picturesource="bind:Variables.UserByID.dataSet.picurl"></wm-picture>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn colwidth="6" columnwidth="6" padding="unset 1.25em" class="col-xs-6" name="gridcolumn10">
+                                                    <wm-label name="ID" caption="bind:Variables.UserByID.dataSet.empId" class="text-muted p" margin="unset unset 0px unset" whitespace="nowrap"></wm-label>
+                                                    <wm-label name="Name" caption="bind:Variables.UserByID.dataSet.firstname" class="h4" margin="0px unset" whitespace="nowrap"></wm-label>
+                                                    <wm-label name="JobTitle" caption="bind:Variables.UserByID.dataSet.jobTitle" class="h5" margin="0px unset unset unset" whitespace="nowrap"></wm-label>
+                                                    <wm-label name="Department" caption="bind:Variables.UserByID.dataSet.department.name" class="p text-muted" margin="unset unset 0px unset" whitespace="nowrap"></wm-label>
+                                                    <wm-label name="Location" caption="bind:Variables.UserByID.dataSet.city" class="text-muted p" whitespace="nowrap"></wm-label>
+                                                    <wm-anchor name="PhoneNumber" caption="bind:Variables.UserByID.dataSet.birthdate" class="h5" hyperlink="tel:" margin="0px unset" whitespace="nowrap"></wm-anchor>
+                                                    <wm-anchor name="EmailID" class="p text-muted" hyperlink="mailto://" caption="" whitespace="nowrap"></wm-anchor>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                        </wm-layoutgrid>
+                                    </wm-card-content>
+                                </wm-card>
+                            </wm-listtemplate>
+                        </wm-livelist>
+                        <wm-composite name="composite1">
+                            <wm-label class="col-md-3 control-label" name="label6"></wm-label>
+                            <wm-container class="col-md-9" name="container1">
+                                <wm-text name="text1" type="number" datavalue="bind:Widgets.livelist1.selecteditem.department.deptId"></wm-text>
+                            </wm-container>
+                        </wm-composite>
+                        <wm-composite name="composite2">
+                            <wm-label class="col-md-3 control-label" name="label7"></wm-label>
+                            <wm-container class="col-md-9" name="container2">
+                                <wm-text name="text2" type="number" datavalue="bind:Variables.UserByID.dataSet.department.deptId"></wm-text>
+                            </wm-container>
+                        </wm-composite>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn6">
+                        <wm-grid title="Employee List" dataset="bind:Variables.HrdbEmployeeData.dataSet" navigation="Pager" name="grid1">
+                            <wm-grid-column binding="firstname" caption="Firstname" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                            <wm-grid-column binding="lastname" caption="Lastname" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                            <wm-grid-column binding="picurl" widget-type="image" caption="Picurl" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string">
+                                <wm-picture picturesource="{{row.getProperty('picurl')}}" hint="{{row.getProperty('picurl')}}" class="" data-ng-class=""></wm-picture>
+                            </wm-grid-column>
+                            <wm-grid-column binding="jobTitle" caption="Job Title" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                        </wm-grid>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow4"></wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

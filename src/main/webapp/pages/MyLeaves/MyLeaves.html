@@ -1,0 +1,32 @@
+<wm-page data-ng-controller="MyLeavesPageController" pagetitle="My Leaves" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-tabs name="tabs1">
+                <wm-tabpane name="tabpane1" title="Leaves Pending Approval">
+                    <wm-grid title="Vacation List" dataset="bind:Variables.PendingLeaves.dataSet" navigation="Classic" name="grid1">
+                        <wm-grid-column binding="startDate" caption="Start Date" type="date" generator="assigned" datepattern="yyyy, dd MMMM" formatpattern="toDate" edit-widget-type="date" show="true" readonly="false"></wm-grid-column>
+                        <wm-grid-column binding="endDate" caption="End Date" type="date" generator="assigned" datepattern="yyyy, dd MMMM" formatpattern="toDate" edit-widget-type="date" show="true" readonly="false"></wm-grid-column>
+                        <wm-grid-column binding="type" caption="Type" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                    </wm-grid>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane2" title="Approved Leaves">
+                    <wm-grid title="Vacation List" dataset="bind:Variables.ApprovedLeaves.dataSet" navigation="Classic" name="grid2">
+                        <wm-grid-column binding="startDate" caption="Start Date" type="date" generator="assigned" datepattern="yyyy, dd MMMM" formatpattern="toDate" edit-widget-type="date" show="true" readonly="false"></wm-grid-column>
+                        <wm-grid-column binding="endDate" caption="End Date" type="date" generator="assigned" datepattern="yyyy, dd MMMM" formatpattern="toDate" edit-widget-type="date" show="true" readonly="false"></wm-grid-column>
+                        <wm-grid-column binding="type" caption="Type" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                    </wm-grid>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane3" title="Rejected Leaves">
+                    <wm-grid title="Vacation List" dataset="bind:Variables.RejectedLeaves.dataSet" navigation="Classic" name="grid3">
+                        <wm-grid-column binding="startDate" caption="Start Date" type="date" generator="assigned" datepattern="yyyy, dd MMMM" formatpattern="toDate" edit-widget-type="date" show="true" readonly="false"></wm-grid-column>
+                        <wm-grid-column binding="endDate" caption="End Date" type="date" generator="assigned" datepattern="yyyy, dd MMMM" formatpattern="toDate" edit-widget-type="date" show="true" readonly="false"></wm-grid-column>
+                        <wm-grid-column binding="type" caption="Type" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                    </wm-grid>
+                </wm-tabpane>
+            </wm-tabs>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>
