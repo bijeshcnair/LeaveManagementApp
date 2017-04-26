@@ -1,13 +1,13 @@
 <wm-partial data-ng-controller="leftnavPageController" name="leftnav" type="leftnav">
     <wm-nav name="leftnavigation" type="pills" layout="stacked">
         <wm-nav-item name="list_dashboard">
-            <wm-anchor caption="My Leaves" name="dashboardLink" iconclass="wi wi-bar-graph"></wm-anchor>
+            <wm-anchor caption="My Leaves" name="dashboardLink" iconclass="wi wi-bar-graph" on-click="Variables.goToPage_MyLeaves.invoke()"></wm-anchor>
         </wm-nav-item>
         <wm-nav-item name="list_order">
-            <wm-anchor caption="Apply Leaves" name="orderLink" iconclass="wi wi-file"></wm-anchor>
+            <wm-anchor caption="Apply Leaves" name="orderLink" iconclass="wi wi-file" on-click="Variables.goToPage_ApplyLeave.invoke()"></wm-anchor>
         </wm-nav-item>
         <wm-nav-item name="list_inventory">
-            <wm-anchor caption="Leave Management" name="inventoryLink" iconclass="wi wi-tag" accessroles="admin"></wm-anchor>
+            <wm-anchor caption="Leave Management" name="inventoryLink" iconclass="wi wi-tag" accessroles="admin" on-click="Variables.goToPage_LeaveManagement.invoke()"></wm-anchor>
         </wm-nav-item>
     </wm-nav>
 </wm-partial>

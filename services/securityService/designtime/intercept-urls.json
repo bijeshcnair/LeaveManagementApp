@@ -1,7 +1,12 @@
 [ {
+  "urlPattern" : "/pages/ApplyLeave/**",
+  "permission" : "Role",
+  "roles" : [ "admin", "user" ],
+  "httpMethod" : null
+}, {
   "urlPattern" : "/pages/LeaveManagement/**",
   "permission" : "Role",
-  "roles" : [ "admin" ],
+  "roles" : [ "admin", "user" ],
   "httpMethod" : null
 }, {
   "urlPattern" : "/pages/Login/**",
@@ -11,7 +16,27 @@
 }, {
   "urlPattern" : "/pages/Main/**",
   "permission" : "Role",
-  "roles" : [ "admin" ],
+  "roles" : [ "admin", "user" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/MyLeaves/**",
+  "permission" : "Role",
+  "roles" : [ "user", "admin" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/Profile/**",
+  "permission" : "Role",
+  "roles" : [ "admin", "user" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/rightnav/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/topnav/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
   "httpMethod" : null
 }, {
   "urlPattern" : "/**",

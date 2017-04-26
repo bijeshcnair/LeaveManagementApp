@@ -680,7 +680,7 @@
       "tableType" : "TABLE",
       "primaryFields" : [ "empId" ]
     },
-    "bindCount" : 1,
+    "bindCount" : 2,
     "tableName" : "EMPLOYEE",
     "tableType" : "TABLE",
     "properties" : [ "department", "employeeByManagerId" ],

@@ -65,9 +65,14 @@
     <security:http auto-config="false" use-expressions="true" entry-point-ref="WMSecAuthEntryPoint" disable-url-rewriting="true" name="interceptUrlsBean" authentication-manager-ref="authenticationManager">
         <security:intercept-url pattern="/j_spring_security_check" access="permitAll"/>
         <security:intercept-url pattern="/j_spring_security_logout" access="permitAll"/>
-        <security:intercept-url pattern="/pages/LeaveManagement/**" access="hasAnyRole('ROLE_admin')"/>
+        <security:intercept-url pattern="/pages/ApplyLeave/**" access="hasAnyRole('ROLE_admin','ROLE_user')"/>
+        <security:intercept-url pattern="/pages/LeaveManagement/**" access="hasAnyRole('ROLE_admin','ROLE_user')"/>
         <security:intercept-url pattern="/pages/Login/**" access="permitAll"/>
-        <security:intercept-url pattern="/pages/Main/**" access="hasAnyRole('ROLE_admin')"/>
+        <security:intercept-url pattern="/pages/Main/**" access="hasAnyRole('ROLE_admin','ROLE_user')"/>
+        <security:intercept-url pattern="/pages/MyLeaves/**" access="hasAnyRole('ROLE_user','ROLE_admin')"/>
+        <security:intercept-url pattern="/pages/Profile/**" access="hasAnyRole('ROLE_admin','ROLE_user')"/>
+        <security:intercept-url pattern="/pages/rightnav/**" access="permitAll"/>
+        <security:intercept-url pattern="/pages/topnav/**" access="permitAll"/>
         <security:intercept-url pattern="/services/prefabs/**/servicedefs" access="permitAll"/>
         <security:intercept-url pattern="/services/security/**" access="permitAll"/>
         <security:intercept-url pattern="/services/servicedefs" access="permitAll"/>
@@ -181,7 +186,7 @@
                 </entry>
                 <entry key="user">
                     <bean class="com.wavemaker.commons.model.security.RoleConfig">
-                        <property name="landingPage" value="Main"/>
+                        <property name="landingPage" value="LeaveManagement"/>
                     </bean>
                 </entry>
             </map>

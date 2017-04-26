@@ -2,4 +2,25 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
+    <sql-query name="toBeApprovedLeaves">
+        <![CDATA[
+        select e.FIRSTNAME,e.LASTNAME,e.PICURL,e.BIRTHDATE,e.JOB_TITLE,e.CITY,v.* from EMPLOYEE e,VACATION v where e.EMP_ID=v.EMP_ID and MANAGER_ID=:data and status='Pending'
+        ]]>
+    <query-param name="data" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="toBeApprovedLeaves__count">
+        <![CDATA[
+        select count(*) from (select e.FIRSTNAME,e.LASTNAME,e.PICURL,e.BIRTHDATE,e.JOB_TITLE,e.CITY,v.* from EMPLOYEE e,VACATION v where e.EMP_ID=v.EMP_ID and MANAGER_ID=:data and status='Pending') wmTempTable
+        ]]>
+    <query-param name="data" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="LeaveAction">
+        <![CDATA[
+        update VACATION set STATUS=:status where ID=:ID
+        ]]>
+    <query-param name="status" type="java.lang.String"/>
+    <query-param name="ID" type="java.lang.String"/>
+    </sql-query>
 </hibernate-mapping>

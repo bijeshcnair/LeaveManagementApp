@@ -1,4 +1,4 @@
-Application.$controller("LeaveManagementPageController", ["$scope", function ($scope) {
+Application.$controller("testPageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
@@ -15,11 +15,3 @@ Application.$controller("LeaveManagementPageController", ["$scope", function ($s
     };
 
 }]);
-
-
-Application.$controller("grid1Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);

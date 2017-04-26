@@ -1,1 +1,86 @@
-{ }
+{
+  "ApproveLeave" : {
+    "_id" : "wm-ApproveLeave-wm.ServiceVariable-1493210036258",
+    "name" : "ApproveLeave",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "ID",
+      "value" : "bind:Widgets.grid1.selecteditem.id",
+      "type" : "string"
+    }, {
+      "target" : "status",
+      "value" : "Approved",
+      "type" : "string"
+    } ],
+    "type" : "com.wavemaker.commons.wrapper.IntegerWrapper",
+    "service" : "hrdb",
+    "operation" : "executeLeaveAction",
+    "operationId" : "QueryExecutionController_executeLeaveAction",
+    "operationType" : "put",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "Variables.ToBeApprovedLeaves.invoke()",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  },
+  "RejectLeave" : {
+    "_id" : "wm-RejectLeave-wm.ServiceVariable-1493210558581",
+    "name" : "RejectLeave",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "ID",
+      "value" : "bind:Widgets.grid1.selecteditem.id",
+      "type" : "string"
+    }, {
+      "target" : "status",
+      "value" : "Rejected",
+      "type" : "string"
+    } ],
+    "type" : "com.wavemaker.commons.wrapper.IntegerWrapper",
+    "service" : "hrdb",
+    "operation" : "executeLeaveAction",
+    "operationId" : "QueryExecutionController_executeLeaveAction",
+    "operationType" : "put",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "Variables.ToBeApprovedLeaves.invoke()",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  },
+  "ToBeApprovedLeaves" : {
+    "_id" : "wm-ToBeApprovedLeaves-wm.ServiceVariable-1493209977684",
+    "name" : "ToBeApprovedLeaves",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.hrdb.models.query.ToBeApprovedLeavesResponse",
+    "service" : "hrdb",
+    "operation" : "executeToBeApprovedLeaves",
+    "operationId" : "QueryExecutionController_executeToBeApprovedLeaves",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  }
+}
