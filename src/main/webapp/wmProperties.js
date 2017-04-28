@@ -1,9 +1,9 @@
 var _WM_APP_PROPERTIES = {
-  "activeTheme" : "material",
+  "activeTheme" : "vermillion",
   "dateFormat" : "",
   "defaultLanguage" : "en",
   "displayName" : "LeaveManagementApp",
-  "homePage" : "Main",
+  "homePage" : "DashBoard",
   "name" : "LeaveManagementApp",
   "platformType" : "WEB",
   "supportedLanguages" : "en",

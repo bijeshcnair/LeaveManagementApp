@@ -7,6 +7,10 @@
   "type" : "PARTIAL",
   "params" : [ ]
 }, {
+  "name" : "DashBoard",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "LeaveManagement",
   "type" : "PAGE",
   "params" : [ ]

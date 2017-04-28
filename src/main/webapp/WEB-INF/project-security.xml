@@ -186,7 +186,7 @@
                 </entry>
                 <entry key="user">
                     <bean class="com.wavemaker.commons.model.security.RoleConfig">
-                        <property name="landingPage" value="LeaveManagement"/>
+                        <property name="landingPage" value="MyLeaves"/>
                     </bean>
                 </entry>
             </map>

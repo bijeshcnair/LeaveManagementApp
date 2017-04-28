@@ -26,6 +26,17 @@
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
+  "goToPage_DashBoard" : {
+    "_id" : "wm-goToPage_DashBoard-wm.NavigationVariable-1493389296925",
+    "name" : "goToPage_DashBoard",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "DashBoard",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_LeaveManagement" : {
     "_id" : "wm-goToPage_LeaveManagement-wm.NavigationVariable-1493038890856",
     "name" : "goToPage_LeaveManagement",

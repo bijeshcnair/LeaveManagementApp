@@ -4,14 +4,14 @@
 <hibernate-mapping>
     <sql-query name="toBeApprovedLeaves">
         <![CDATA[
-        select e.FIRSTNAME,e.LASTNAME,e.PICURL,e.BIRTHDATE,e.JOB_TITLE,e.CITY,v.* from EMPLOYEE e,VACATION v where e.EMP_ID=v.EMP_ID and MANAGER_ID=:data and status='Pending'
+        select e.FIRSTNAME,e.LASTNAME,e.PICURL,e.BIRTHDATE,e.JOB_TITLE,e.CITY,v.* from EMPLOYEE e,VACATION v where e.EMP_ID=v.EMP_ID and MANAGER_ID=:data and status='pending'
         ]]>
     <query-param name="data" type="java.lang.String"/>
     </sql-query>
 
     <sql-query name="toBeApprovedLeaves__count">
         <![CDATA[
-        select count(*) from (select e.FIRSTNAME,e.LASTNAME,e.PICURL,e.BIRTHDATE,e.JOB_TITLE,e.CITY,v.* from EMPLOYEE e,VACATION v where e.EMP_ID=v.EMP_ID and MANAGER_ID=:data and status='Pending') wmTempTable
+        select count(*) from (select e.FIRSTNAME,e.LASTNAME,e.PICURL,e.BIRTHDATE,e.JOB_TITLE,e.CITY,v.* from EMPLOYEE e,VACATION v where e.EMP_ID=v.EMP_ID and MANAGER_ID=:data and status='pending') wmTempTable
         ]]>
     <query-param name="data" type="java.lang.String"/>
     </sql-query>
