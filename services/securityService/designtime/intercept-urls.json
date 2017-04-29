@@ -43,4 +43,14 @@
   "permission" : "Authenticated",
   "roles" : null,
   "httpMethod" : null
+}, {
+  "urlPattern" : "/services/hrdb/Employee",
+  "permission" : "Role",
+  "roles" : [ "admin" ],
+  "httpMethod" : "POST"
+}, {
+  "urlPattern" : "/services/hrdb/queryExecutor/queries/LeaveAction",
+  "permission" : "Role",
+  "roles" : [ "admin" ],
+  "httpMethod" : "PUT"
 } ]

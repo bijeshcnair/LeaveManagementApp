@@ -73,6 +73,8 @@
         <security:intercept-url pattern="/pages/Profile/**" access="hasAnyRole('ROLE_admin','ROLE_user')"/>
         <security:intercept-url pattern="/pages/rightnav/**" access="permitAll"/>
         <security:intercept-url pattern="/pages/topnav/**" access="permitAll"/>
+        <security:intercept-url pattern="/services/hrdb/Employee" access="hasAnyRole('ROLE_admin')" method="POST"/>
+        <security:intercept-url pattern="/services/hrdb/queryExecutor/queries/LeaveAction" access="hasAnyRole('ROLE_admin')" method="PUT"/>
         <security:intercept-url pattern="/services/prefabs/**/servicedefs" access="permitAll"/>
         <security:intercept-url pattern="/services/security/**" access="permitAll"/>
         <security:intercept-url pattern="/services/servicedefs" access="permitAll"/>
