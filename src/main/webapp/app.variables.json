@@ -56,6 +56,17 @@
     "operation" : "gotoPage",
     "pageName" : "Main"
   },
+  "goToPage_ManageEmployees" : {
+    "_id" : "wm-goToPage_ManageEmployees-wm.NavigationVariable-1493505254819",
+    "name" : "goToPage_ManageEmployees",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "ManageEmployees",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_MyLeaves" : {
     "_id" : "wm-goToPage_MyLeaves-wm.NavigationVariable-1493045357583",
     "name" : "goToPage_MyLeaves",
